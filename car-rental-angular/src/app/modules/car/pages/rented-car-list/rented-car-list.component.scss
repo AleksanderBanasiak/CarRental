@@ -1,0 +1,132 @@
+.rentedCars{
+  color: white;
+  width: 30%;
+  margin: auto;
+  font-size: 50px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+.tableCar{
+  border: 2px solid #FFEA00;
+  width: 58%;
+  margin: auto;
+  border-radius: 5px;
+}
+.tableCar td, th{
+  padding: 15px;
+  font-weight: 600;
+  font-size: 20px;
+  border: 2px solid #FFEA00;
+  text-align: center;
+  justify-content: center;
+}
+
+.tableCar th{
+  background-color: #FFEA00;
+  color: #24252A;
+}
+
+
+
+.rentCar{
+  border: 2px solid #FFEA00;
+  color: #FFEA00;
+  padding: 5px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+.rentCar:hover{
+  background-color: #FFEA00;
+  color: #24252A;
+}
+.navBar a{
+  background-color: #24252A;
+  color: white;
+  border: none;
+}
+.shareFeedback{
+  border: 3px solid #FFEA00;
+  background-color: #24252A;
+  padding: 20px;
+  color: #e8e8e8;
+  margin: auto;
+  border-radius: 20px;
+
+}
+.returnAndShare{
+  padding: 30px;
+  text-align: center;
+  font-size: 45px;
+  font-weight: 600;
+  color: #FFEA00;
+}
+.description{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px;
+  margin: 5px;
+}
+.carForm{
+  border-radius: 20px;
+  background-color: #24252A;
+  border: 2px solid #FFEA00;
+  color: #FFEA00;
+  font-size: 20px;
+}
+.formCarLabel{
+  color: #FFEA00;
+  font-weight: 600;
+  font-size: 30px;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+}
+.ratePanel{
+  font-size: 30px;
+  text-align: center;
+  padding-top: 30px;
+}
+.formActions{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+.cancel{
+  display: flex;
+  flex-direction: column-reverse;
+  font-size: 40px;
+  color: #FFEA00;
+}
+
+.rate button{
+  margin-left: 40px;
+}
+.rate{
+  display: flex;
+  justify-content: center;
+  width: 98%;
+
+}
+.returnAndRate{
+  border: 3px solid #FFEA00;
+  background-color: #24252A;
+  padding: 10px;
+  color: #FFEA00;
+  border-radius: 10px;
+  transition: 0.4s ease-in-out;
+}
+.returnAndRate:hover{
+  background-color: #FFEA00;
+  color: #24252A;
+}
+.all{
+  background-color: #525561;
+}

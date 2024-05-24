@@ -1,0 +1,36 @@
+<div class="all">
+  <div class="cardCar">
+    <img [src]="carImg">
+      <div class="carAll">
+        <div class="divCar" >
+          <div class="divInfo">
+            <p class="carBrand">&nbsp;{{car.brand}}</p>
+            <h5 class="carModel">&nbsp;{{car.model}}</h5>
+            <h6 class="carOwner">Car owner: {{car.owner}}</h6>
+            <h6 class="carOwner" *ngIf="!car.shareable && !car.archived">Car status: Private</h6>
+            <h6 class="carOwner" *ngIf="car.shareable && !car.archived">Car status: Shareable</h6>
+            <h6 class="carOwner" *ngIf="!car.shareable &&  car.archived">Car status: Archived</h6>
+          </div>
+            <div class="divInfo">
+              <p class="carHorsepower">Horsepower: {{car.horsepower}}</p>
+              <p class="carYear">Year of production: {{car.yearOfProduction}}</p>
+            </div>
+        </div>
+
+      <div class="carBottom">
+        <div class="carRate">
+          <app-rating [rating]="car.rate || 0"></app-rating>
+          <span class="fw-bold" *ngIf="car.rate || 0 > 0">{{car.rate}}</span>
+        </div>
+        <div class="carThings2" *ngIf="!manage">
+          <div (click)="onRent()" class="rentCar"> Rent car</div>
+        </div>
+        <div class="carThings2" *ngIf="manage" >
+          <i (click)="onEdit()" class="rentCar"> Edit</i>
+          <i (click)="onShare()" class="rentCar" > Share</i>
+          <i (click)="onArchive()" class="rentCar" > Archive</i>
+        </div>
+      </div>
+      </div>
+  </div>
+</div>

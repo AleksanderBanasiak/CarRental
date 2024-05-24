@@ -1,0 +1,115 @@
+<div class="all">
+<h2 class="rentedCars">My rented cars</h2>
+
+<div class="d-flex flex-column col-6 shareFeedback" *ngIf="selectedCar">
+  <h2 class="returnAndShare">Return and share feedback</h2>
+  <div class="d-flex flex-column col-12">
+    <div class="description">Brand:&nbsp;{{selectedCar.brand}}</div>
+    <div class="description">Model:&nbsp;{{selectedCar.model}}</div>
+  <div class="description">Rate:&nbsp;{{selectedCar.rate}}</div>
+  </div>
+
+    <form>
+        <label class="formCarLabel" for="feedback">Feedback:</label>
+        <textarea [(ngModel)]="feedbackRequest.comment" rows="3" class="form-control carForm"
+                  id="feedback" name="feedback" placeholder="Feedback"></textarea>
+
+      <div class="ratePanel">
+        {{feedbackRequest.note}}
+        <app-rating [rating]="feedbackRequest.note || 0"></app-rating>
+        <input [(ngModel)]="feedbackRequest.note" type="range" id="rate" name="rate" class="form-range w-25" min="0" max="5" step="0.5">
+
+      </div>
+
+      <div class="formActions">
+        <div class="rate">
+        <button (click)="returnCar(true)" class="returnAndRate" type="submit">Rate and return</button>
+        </div>
+        <div class="cancel">
+
+          <i class="cursor-pointer fas fa-times" (click)="selectedCar = undefined"></i>
+
+        </div>
+      </div>
+    </form>
+
+</div>
+
+
+
+
+<div *ngIf="!selectedCar">
+  <table class="table table-hover table-dark tableCar" >
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Brand</th>
+      <th scope="col">Model</th>
+      <th scope="col">Horsepower</th>
+      <th scope="col">Year of production</th>
+      <th scope="col">Rate</th>
+      <th scope="col">Return</th>
+      <th scope="col">Is approved</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let car of rentedCars.content; let i = index">
+      <td >{{i +1}}</td>
+      <td>{{car.brand}}</td>
+      <td>{{car.model}}</td>
+      <td>{{car.horsepower}}</td>
+      <td>{{car.yearOfProduction}}</td>
+      <td><i class="fas fa-star text-warning"></i> {{car.rate}}</td>
+      <td>
+        <div *ngIf="!car.returned" (click)="returnRentedCar(car)" class="carThings2">
+          <div class="rentCar">Return</div>
+        </div>
+      </td>
+      <td>
+        <div *ngIf="car.returnApproved">Yes</div>
+        <div *ngIf="!car.returnApproved">No</div>
+      </td>
+
+    </tr>
+    </tbody>
+  </table>
+  <div class="d-flex justify-content-center mt-3">
+    <nav class="navBar">
+      <ul class="pagination">
+        <li class="page-item" >
+          <a (click)="goToFirstPage()" class="page-link" href="javascript:void(0)" aria-label="Previous"
+             [class.disabled]="page == 0" >
+            <i class="fa-solid fa-angles-left"></i>
+          </a>
+        </li>
+        <li class="page-item">
+          <a (click)="goToPreviousPage()" class="page-link" href="javascript:void(0)" aria-label="Previous"
+             [class.disabled]="page == 0" >
+            <i class="fa-solid fa-angle-left"></i>
+          </a>
+        </li>
+        <li class="page-item " *ngFor="let _ of [].constructor(this.rentedCars.totalPages); let i = index">
+          <a (click)="goToPage(i)" class="page-link" href="javascript:void(0)" aria-label="Previous"
+             [class.active]="page == i">
+            {{i +1}}
+          </a>
+        </li>
+        <li class="page-item">
+          <a (click)="goToNextPage()" class="page-link" href="javascript:void(0)" aria-label="Next"
+             [class.disabled]="isLastPage" >
+            <i class="fa-solid fa-chevron-right"></i>
+          </a>
+        </li>
+        <li class="page-item">
+          <a (click)="goToLastPage()" class="page-link" href="javascript:void(0)" aria-label="Next"
+             [class.disabled]="isLastPage" >
+            <i class="fa-solid fa-angles-right"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  </div>
+</div>
+
+

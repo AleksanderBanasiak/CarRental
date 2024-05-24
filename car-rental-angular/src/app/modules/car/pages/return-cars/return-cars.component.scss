@@ -1,0 +1,53 @@
+.rentedCars{
+  color: white;
+  width: 30%;
+  margin: auto;
+  font-size: 50px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+.tableCar{
+  border: 2px solid #FFEA00;
+  width: 58%;
+  margin: auto;
+  border-radius: 5px;
+}
+.tableCar td, th{
+  padding: 15px;
+  font-weight: 600;
+  font-size: 20px;
+  border: 2px solid #FFEA00;
+  text-align: center;
+  justify-content: center;
+}
+
+.tableCar th{
+  background-color: #FFEA00;
+  color: #24252A;
+}
+
+
+
+.rentCar{
+  border: 2px solid #FFEA00;
+  color: #FFEA00;
+  padding: 5px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+.rentCar:hover{
+  background-color: #FFEA00;
+  color: #24252A;
+}
+.navBar a{
+  background-color: #24252A;
+  color: white;
+  border: none;
+}

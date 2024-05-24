@@ -1,0 +1,113 @@
+i {
+  cursor: pointer;
+}
+
+.cardCar{
+  border: 3px solid yellow;
+  display: flex;
+  flex-direction: row;
+  border-radius: 20px;
+}
+.all{
+
+  width: 70rem;
+  margin: 20px;
+}
+.all img{
+  height: 300px;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  max-width: 450px;
+}
+
+.carBrand{
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 40px;
+  margin-left: 10px;
+}
+.carModel{
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: 18px;
+}
+.carOwner{
+  font-weight: 600;
+  font-size: 15px;
+  margin: 22px;
+}
+.carHorsepower{
+  font-weight: 600;
+  font-size: 20px;
+  margin-right: 22px;
+  margin-top: 20px;
+}
+.carYear{
+  font-weight: 600;
+  font-size: 20px;
+  margin-right: 22px;
+}
+.divCar{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.divInfo{
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.carAll{
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #24252A;
+  color: white;
+}
+.carRate{
+
+  font-size: 30px;
+  text-align: center;
+  width: 45%;
+  justify-content: start;
+  margin-left: 20px;
+  display: flex ;
+  flex-direction: row;
+}
+.carThings{
+
+  display: flex;
+  justify-content: space-evenly;
+  width: 55%;
+  font-size: 20px;
+  margin-top: 14px;
+}
+
+
+.rentCar{
+  border: 2px solid #FFEA00;
+  color: #FFEA00;
+  font-size: 25px;
+  padding: 10px;
+  margin-right: 20px;
+  border-radius: 15px;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+.rentCar:hover{
+  background-color: #FFEA00;
+  color: #24252A;
+}
+.carBottom{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 70px;
+}

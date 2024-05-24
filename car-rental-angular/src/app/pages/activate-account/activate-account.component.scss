@@ -1,0 +1,47 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.activate-message, .activate-error {
+  text-align: center;
+}
+
+.activate-error {
+  color: #FFEA00;
+}
+.container button{
+  background-color: #24252A;
+  padding: 10px 20px 10px 20px;
+  margin: 10px;
+  border: 2px solid #FFEA00;
+  font-size: 15px;
+  font-weight: 500;
+  color: #edf0f1;
+}
+.container button:hover{
+  background-color: #FFEA00;
+  padding: 10px 20px 10px 20px;
+  margin: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #24252A;
+  border: 2px solid #FFEA00;
+
+}
+.code{
+  background-color: #24252A;
+  color: #FFEA00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 550px;
+  min-height: 400px;
+  border-radius: 40px;
+}
+.code-input {
+  border-color: red;
+  color: #edf0f1;
+}

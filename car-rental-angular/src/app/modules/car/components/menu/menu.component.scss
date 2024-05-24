@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+li, a, button, h2{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10%;
+  background-color: #24252A;
+}
+.logo{
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.6s ease 0s;
+}
+.logo:hover{
+  cursor: pointer;
+  font-size: 20px;
+  color: #FFEA00;
+}
+.navBar{
+  list-style: none;
+}
+.navBar li{
+  display: inline-block;
+  padding: 0 20px;
+}
+.navBar li a{
+  transition: all 0.3s ease 0s;
+}
+.navBar li a:hover{
+  color: #FFEA00;
+}
+li > a{
+  &.active{
+    color: #FFEA00;
+  }
+}
+.contact{
+  padding: 9px 25px;
+  background-color: #24252A;
+  border: 2px solid #FFEA00;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.7s ease 0s;
+  margin-right: 10px;
+}
+.contact:hover{
+  background-color: #FFEA00;
+  border: 2px solid #FFEA00;
+  color: #24252A;
+}
+.contact2{
+  padding: 12px;
+  border-radius: 50px;
+  border: 2px solid #FFEA00;
+  transition: .3s ease-in-out;
+}
+.contact2:hover{
+  background-color: #FFEA00;
+  border: 2px solid #FFEA00;
+  color: #24252A;
+}

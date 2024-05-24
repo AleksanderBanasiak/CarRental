@@ -1,0 +1,45 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/car_rental
+    username: banasiak
+    password: banasiak
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  mail:
+    host: localhost
+    port: 1025
+    username: banasiak
+    password: banasiak
+    properties:
+      mail:
+        smtp:
+          trust: "*"
+        auth: true
+        starttls:
+          enable: true
+        connectiontimout: 5000
+        timeout: 3000
+        writetimeout: 5000
+
+application:
+    security:
+      jwt:
+        secret-key: qQrModrMx9ySUfWIUDuQXd88fLeo69eehNeWBKVLG2jOn/UX7ZXC7164YXiHmgjB
+        expiration: 8640000
+
+    mailing:
+      frontend:
+        activation-url: http://localhost:4200/activate-account
+
+    file:
+      upload:
+        photos-path: ./uploads

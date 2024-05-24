@@ -1,0 +1,66 @@
+<div class="site">
+  <h1 class="todo">
+    <p>Car</p>
+    <p class="obj1">Rental</p>
+  </h1>
+  <div class="container" id="container" >
+    <div class="form-container sign-up"  [@toggleSlideAnimation]="isActive ? 'right' : 'left'">
+      <div class="contentSingIn">
+        <br />
+        <h1 class="signIn">Create Account</h1>
+        <div class="showMessage" >
+          <div class="message"  *ngIf="errorMsg.length" > {{errorMsg[0]}}</div>
+        </div>
+        <div class ="input-group">
+          <input [(ngModel)]="registerRequest.name" type="text" autocomplete="off" required>
+          <label>Name</label>
+        </div>
+        <div class ="input-group">
+          <input [(ngModel)]="registerRequest.email" type="email" autocomplete="off" required>
+          <label>Email</label>
+        </div>
+        <div class ="input-group">
+          <input [(ngModel)]="registerRequest.password" type="password" autocomplete="off" required>
+          <label>Password</label>
+        </div>
+        <button name="register" (click)="register()" type="button">Sign Up</button>
+      </div>
+
+    </div>
+
+
+    <div class="form-container sign-in" [@toggleSlideAnimation2]="isActive ? 'left' : 'right'">
+      <div class="contentSingIn2">
+        <h1 class="signIn">Sign In</h1>
+        <div class="showMessage" >
+          <div class="message"  *ngIf="errorMsg.length" > {{errorMsg[0]}}</div>
+        </div>
+        <div class ="input-group">
+          <input autocomplete="off" required>
+          <label>Email</label>
+        </div>
+        <div class ="input-group">
+          <input class="form-input" autocomplete="off" required>
+          <label>Password</label>
+        </div>
+        <button (click)="login()">Sign In</button>
+      </div>
+    </div>
+    <div class="toggle-container" [@toggleAnimation]="isActive ? 'active' : 'inactive'">
+      <div class="toggle"  >
+        <div class="toggle-panel toggle-left"  [@panel]="isActive ? 'active' : 'inactive'">
+          <h1>Welcome Back!</h1>
+          <p>Enter your personal details and start being more productive than ever</p>
+          <button (click)="toggleAnimation()" class="hidden" >Sign In</button>
+        </div>
+        <div class="toggle-panel toggle-right" [@panel2]="isActive ? 'active' : 'inactive'">
+          <h1>First time?</h1>
+          <p>Register with your personal details and never forget your tasks</p>
+          <button (click)="toggleAnimation()" type="submit" class="hidden" id="register">Sign Up</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+
